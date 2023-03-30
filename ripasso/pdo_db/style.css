@@ -1,0 +1,11 @@
+table{
+    margin:0 auto;
+    width: 80%;
+    height: 500px;
+    text-align: center;
+    border: 1px dotted blue;
+}
+
+td{
+    padding: 3px;
+}
