@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Commento -->
+    <!-- Commento Paolo Fassin -->
     <?php
         require("dbconn.php");
     ?>
