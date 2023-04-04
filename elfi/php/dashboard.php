@@ -15,6 +15,7 @@
             $session_user = $_SESSION['session_user'];
             echo '<img src="uploads/'.$session_user.'" class="img-thumbnail" alt="immagine profilo" style="width: 150px;">';
             echo "<br> Benvenuto '$session_user'!";
+            echo '<a href="../acquisti.html">Effettua un acquisto</a>';
         }
 
         else{
