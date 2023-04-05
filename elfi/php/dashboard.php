@@ -10,20 +10,14 @@
 <body>
       
     <?php
-        session_start();
-        if(isset($_SESSION['session_id'])){
-            $session_user = $_SESSION['session_user'];
-            echo '<img src="uploads/'.$session_user.'" class="img-thumbnail" alt="immagine profilo" style="width: 150px;">';
-            echo "<br> Benvenuto '$session_user'!";
-            echo '<a href="../acquisti.html">Effettua un acquisto</a>';
-        }
-
-        else{
-            echo "Devi prima fare il login!<br>"; 
-            echo '<a href="../login.html">Accedi qui</a>';
-        }
+        require('lemiefunzioni.php');
+        $session_user = islogged();
+        echo '<img src="uploads/'.$session_user.'" class="img-thumbnail" alt="immagine profilo" style="width: 150px;">';
+        echo "<br> Benvenuto '$session_user'!";
 
     ?>
+
+<br><a href="acquisti.php">Effettua un acquisto</a> <br>
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
   Carica la tua immagine profilo:

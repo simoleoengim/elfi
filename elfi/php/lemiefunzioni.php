@@ -13,4 +13,14 @@ function connettimi($servername, $username, $password, $dbname){
     }
 }
 
+function islogged(){
+    session_start();
+    if(isset($_SESSION['session_id'])){
+        return $_SESSION['session_user'];
+    }
+    else{
+        header('Location: ../access_denied.html');
+        return null;
+    }
+}
 ?>
